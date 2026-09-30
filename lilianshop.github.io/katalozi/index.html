@@ -1,1 +1,326 @@
-<!DOCTYPE html> <html lang="sr"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>LilianShop – Katalozi</title> <style> * { box-sizing: border-box; } html { scroll-behavior: smooth; } body { margin: 0; padding: 0; font-family: Arial, Helvetica, sans-serif; background: #f5f5f5; color: #222; } .header { background: #ffffff; padding: 18px 15px; text-align: center; border-bottom: 1px solid #ddd; position: sticky; top: 0; z-index: 100; } .logo { font-size: 28px; font-weight: bold; color: #111; margin-bottom: 5px; } .subtitle { font-size: 15px; color: #777; } .container { width: 100%; max-width: 900px; margin: 0 auto; padding: 25px 15px 40px; } .naslov { text-align: center; font-size: 30px; margin: 10px 0 8px; font-weight: 700; } .opis { text-align: center; color: #666; margin: 0 0 25px; font-size: 16px; } .katalozi { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; } .katalog { display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 170px; padding: 25px 18px; background: #ffffff; border-radius: 18px; border: 1px solid #e1e1e1; text-decoration: none; color: #222; box-shadow: 0 5px 18px rgba(0,0,0,0.07); transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease; } .katalog:hover { transform: translateY(-4px); box-shadow: 0 9px 25px rgba(0,0,0,0.12); } .katalog:active { transform: scale(0.98); } .ikona { font-size: 48px; margin-bottom: 12px; } .naziv { font-size: 20px; font-weight: bold; text-align: center; margin-bottom: 7px; } .detalji { font-size: 14px; color: #777; text-align: center; } .prazno { background: #fff; border: 2px dashed #ccc; border-radius: 18px; padding: 35px 20px; text-align: center; color: #777; margin-top: 20px; } .povratak { display: block; width: fit-content; margin: 30px auto 0; padding: 13px 22px; background: #222; color: #fff; border-radius: 12px; text-decoration: none; font-size: 15px; font-weight: bold; } .povratak:hover { background: #000; } .footer { text-align: center; color: #888; font-size: 13px; padding: 25px 15px; } @media (max-width: 600px) { .header { padding: 15px 10px; } .logo { font-size: 24px; } .subtitle { font-size: 13px; } .container { padding: 20px 12px 35px; } .naslov { font-size: 26px; } .opis { font-size: 14px; } .katalozi { grid-template-columns: 1fr; gap: 14px; } .katalog { min-height: 145px; } .ikona { font-size: 42px; } .naziv { font-size: 19px; } } </style> </head> <body> <header class="header"> <div class="logo">LilianShop</div> <div class="subtitle">Digitalni katalozi</div> </header> <main class="container"> <h1 class="naslov">📚 Katalozi</h1> <p class="opis"> Izaberite katalog koji želite da otvorite </p> <div class="katalozi"> <!-- ========================================= KATALOG 1 ========================================= --> <a class="katalog" href="katalog.html"> <div class="ikona">📖</div> <div class="naziv"> Katalog </div> <div class="detalji"> Otvori katalog proizvoda </div> </a> <!-- ========================================= KATALOG 2 ========================================= Kada napraviš drugi katalog, samo ukloni komentare i promeni naziv. --> <!-- <a class="katalog" href="katalog-akcija.html"> <div class="ikona">🏷️</div> <div class="naziv"> Akcija </div> <div class="detalji"> Proizvodi na akciji </div> </a> --> <!-- ========================================= KATALOG 3 ========================================= <a class="katalog" href="nova-kolekcija.html"> <div class="ikona">✨</div> <div class="naziv"> Nova kolekcija </div> <div class="detalji"> Najnoviji proizvodi </div> </a> --> </div> <!-- Ako trenutno nemaš nijedan katalog, možeš prikazati ovu poruku. --> <!-- <div class="prazno"> Trenutno nema dostupnih kataloga. </div> --> <a class="povratak" href="../index.html"> ← Nazad na početnu stranicu </a> </main> <footer class="footer"> © 2026 LilianShop </footer> </body> </html>
+```html
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>LilianShop – Katalozi</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f5f5f5;
+            color: #222;
+        }
+
+        .header {
+            background: #ffffff;
+            padding: 18px 15px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #111;
+            margin-bottom: 5px;
+        }
+
+        .subtitle {
+            font-size: 15px;
+            color: #777;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 25px 15px 40px;
+        }
+
+        .naslov {
+            text-align: center;
+            font-size: 30px;
+            margin: 10px 0 8px;
+            font-weight: 700;
+        }
+
+        .opis {
+            text-align: center;
+            color: #666;
+            margin: 0 0 25px;
+            font-size: 16px;
+        }
+
+        .katalozi {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 18px;
+        }
+
+        .katalog {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            min-height: 170px;
+            padding: 25px 18px;
+
+            background: #ffffff;
+            border-radius: 18px;
+            border: 1px solid #e1e1e1;
+
+            text-decoration: none;
+            color: #222;
+
+            box-shadow: 0 5px 18px rgba(0,0,0,0.07);
+
+            transition:
+                transform 0.2s ease,
+                box-shadow 0.2s ease,
+                background 0.2s ease;
+        }
+
+        .katalog:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 9px 25px rgba(0,0,0,0.12);
+        }
+
+        .katalog:active {
+            transform: scale(0.98);
+        }
+
+        .ikona {
+            font-size: 48px;
+            margin-bottom: 12px;
+        }
+
+        .naziv {
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 7px;
+        }
+
+        .detalji {
+            font-size: 14px;
+            color: #777;
+            text-align: center;
+        }
+
+        .prazno {
+            background: #fff;
+            border: 2px dashed #ccc;
+            border-radius: 18px;
+            padding: 35px 20px;
+            text-align: center;
+            color: #777;
+            margin-top: 20px;
+        }
+
+        .povratak {
+            display: block;
+            width: fit-content;
+            margin: 30px auto 0;
+
+            padding: 13px 22px;
+
+            background: #222;
+            color: #fff;
+
+            border-radius: 12px;
+            text-decoration: none;
+
+            font-size: 15px;
+            font-weight: bold;
+        }
+
+        .povratak:hover {
+            background: #000;
+        }
+
+        .footer {
+            text-align: center;
+            color: #888;
+            font-size: 13px;
+            padding: 25px 15px;
+        }
+
+        @media (max-width: 600px) {
+
+            .header {
+                padding: 15px 10px;
+            }
+
+            .logo {
+                font-size: 24px;
+            }
+
+            .subtitle {
+                font-size: 13px;
+            }
+
+            .container {
+                padding: 20px 12px 35px;
+            }
+
+            .naslov {
+                font-size: 26px;
+            }
+
+            .opis {
+                font-size: 14px;
+            }
+
+            .katalozi {
+                grid-template-columns: 1fr;
+                gap: 14px;
+            }
+
+            .katalog {
+                min-height: 145px;
+            }
+
+            .ikona {
+                font-size: 42px;
+            }
+
+            .naziv {
+                font-size: 19px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header class="header">
+    <div class="logo">LilianShop</div>
+    <div class="subtitle">Digitalni katalozi</div>
+</header>
+
+
+<main class="container">
+
+    <h1 class="naslov">📚 Katalozi</h1>
+
+    <p class="opis">
+        Izaberite katalog koji želite da otvorite
+    </p>
+
+
+    <div class="katalozi">
+
+        <!-- =========================================
+             KATALOG 1
+             ========================================= -->
+
+        <a class="katalog" href="katalog.html">
+
+            <div class="ikona">📖</div>
+
+            <div class="naziv">
+                Katalog
+            </div>
+
+            <div class="detalji">
+                Otvori katalog proizvoda
+            </div>
+
+        </a>
+
+
+        <!-- =========================================
+             KATALOG 2
+             =========================================
+
+        Kada napraviš drugi katalog,
+        samo ukloni komentare i promeni naziv.
+
+        -->
+
+        <!--
+
+        <a class="katalog" href="katalog-akcija.html">
+
+            <div class="ikona">🏷️</div>
+
+            <div class="naziv">
+                Akcija
+            </div>
+
+            <div class="detalji">
+                Proizvodi na akciji
+            </div>
+
+        </a>
+
+        -->
+
+
+        <!-- =========================================
+             KATALOG 3
+             =========================================
+
+        <a class="katalog" href="nova-kolekcija.html">
+
+            <div class="ikona">✨</div>
+
+            <div class="naziv">
+                Nova kolekcija
+            </div>
+
+            <div class="detalji">
+                Najnoviji proizvodi
+            </div>
+
+        </a>
+
+        -->
+
+    </div>
+
+
+    <!--
+        Ako trenutno nemaš nijedan katalog,
+        možeš prikazati ovu poruku.
+    -->
+
+    <!--
+    <div class="prazno">
+        Trenutno nema dostupnih kataloga.
+    </div>
+    -->
+
+
+    <a class="povratak" href="../index.html">
+        ← Nazad na početnu stranicu
+    </a>
+
+</main>
+
+
+<footer class="footer">
+    © 2026 LilianShop
+</footer>
+
+
+</body>
+</html>
+```
